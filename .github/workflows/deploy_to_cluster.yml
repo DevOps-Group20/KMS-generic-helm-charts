@@ -40,8 +40,6 @@ jobs:
 
       - name: Helm tool installer
         uses: Azure/setup-helm@v4
-        
-      - name: Add Helm repository
-        run: |
-          helm -n kms upgrade --install --create-namespace kms ./ -f ./example-values/minikube.yaml
-          helm repo update
+
+      - name: Install or upgrade Helm release
+        run: helm -n kms upgrade --install --create-namespace kms ./ -f ./example-values/minikube.yaml
