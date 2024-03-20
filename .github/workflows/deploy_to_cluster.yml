@@ -9,7 +9,7 @@ permissions:
   contents: read
 
 jobs:
-  setup_prometheus:
+  setup_kms:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
