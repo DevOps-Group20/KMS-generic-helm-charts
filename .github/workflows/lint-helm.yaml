@@ -1,7 +1,8 @@
 name: lint-helm-test-template
 
 on:
-  [push]
+  workflow_dispatch
+  # [push]
 
 jobs:
   test-n-deploy:
